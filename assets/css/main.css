@@ -10,7 +10,7 @@ body {
 
 /*   SECONDARY COLOR TO BE USED ACROSS THE WEBSITE   */
 .text-secondary {
-  color: #d8b415;
+  color: #0366fa;
 }
 
 /*   MENU   */
@@ -60,7 +60,7 @@ body {
   align-items: center;
   justify-content: center;
   background: rgba(50, 50, 50, .95);
-  transform: translate3d(0px, -100vh, 0);
+  transform: translate3d(-50vw , 0, 0);
   transition: all 0.7s ease-in-out;
 }
 
@@ -74,7 +74,7 @@ body {
   align-items: center;
   justify-content: center;
   background: rgba(60, 60, 60, .95);
-  transform: translate3d(0px, 100vh, 0);
+  transform: translate3d(50vw, 0, 0);
   transition: all 0.7s ease-in-out;
 }
 .show {
@@ -88,7 +88,7 @@ body {
   text-decoration: none;
 }
 .nav-link:hover {
-  color: #d8b415;
+  color: #0366fa;
 }
 
 .portrait {
@@ -97,7 +97,7 @@ body {
   background: url(../img/chadProfile.jpeg);
   background-size: cover;
   border-radius: 50%;
-  border: solid 2px #d8b415;
+  border: solid 2px #555;
 }
 
 /*   BACKGROUND IMAGE AND OVERLAY   */
@@ -127,6 +127,10 @@ body {
   margin-top: 20vh;
 }
 
+.icons {
+  margin-left: 10px;
+}
+
 .icons a {
   padding: 0.4rem;
   color: #eee;
@@ -134,7 +138,7 @@ body {
 }
 
 .icons a:hover {
-  color: #d8b415;
+  color: #0366fa;
   transition: all 0.5s ease-out;
 }
 
@@ -157,7 +161,7 @@ main {
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  border: solid 2px #d8b415;
+  border: solid 2px #555;
   margin: auto;
 }
 .bio {
