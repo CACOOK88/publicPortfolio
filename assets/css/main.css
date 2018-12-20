@@ -8,6 +8,11 @@ body {
   line-height: 1.5;
 }
 
+/*   SECONDARY COLOR TO BE USED ACROSS THE WEBSITE   */
+.text-secondary {
+  color: #d8b415;
+}
+
 /*   MENU   */
 .menu-btn {
   position: absolute;
@@ -23,6 +28,21 @@ body {
   height: 3px;
   background: #eee;
   margin: 0 0 5px 0;
+  transition: all 0.5s ease-out;
+}
+
+.menu-btn.close {
+  transform: rotate(180deg);
+}
+
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px)
 }
 
 .menu {
@@ -33,17 +53,15 @@ body {
   visibility: hidden;
 }
 
-.show {
-  visibility: visible;
-}
-
 .menu-branding {
   display: flex;
   width: 50%;
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background: rgba(50, 50, 50, .8);
+  background: rgba(50, 50, 50, .95);
+  transform: translate3d(0px, -100vh, 0);
+  transition: all 0.7s ease-in-out;
 }
 
 .menu-nav {
@@ -55,9 +73,14 @@ body {
   margin: 0;
   align-items: center;
   justify-content: center;
-  background: rgba(60,60,60,.8)
+  background: rgba(60, 60, 60, .95);
+  transform: translate3d(0px, 100vh, 0);
+  transition: all 0.7s ease-in-out;
 }
-
+.show {
+  visibility: visible;
+  transform: translate3d(0,0,0);
+}
 .nav-link {
   display: inline-block;
   font-size: 30px;
@@ -67,7 +90,6 @@ body {
 .nav-link:hover {
   color: #d8b415;
 }
-
 
 .portrait {
   height: 250px;
@@ -96,11 +118,6 @@ body {
   z-index: -1;
 }
 
-/*   SECONDARY COLOR TO BE USED ACROSS THE WEBSITE   */
-.text-secondary {
-  color: #d8b415;
-}
-
 /*   HOME SCREEN CONTAINER   */
 #home {
   padding: 0 5vw;
@@ -121,6 +138,60 @@ body {
   transition: all 0.5s ease-out;
 }
 
+
+/*   ABOUT PAGE STYLES   */
+main {
+  padding: 4rem;
+}
+.about-info {
+  padding-top: 30px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 
+    'bioimage bio bio'
+    'bioimage bio bio ';
+  grid-template-columns: repeat(3, 1fr)
+}
+.bio-image {
+  grid-area: bioimage;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  border: solid 2px #d8b415;
+  margin: auto;
+}
+.bio {
+  grid-area: bio;
+}
+
+.bio h3 {
+  font-size: 2rem;
+}
+.bio p {
+  font-size: 1.25rem;
+  text-indent: 40px;
+}
+
+/*   WORK PAGE STYLES   */
+
+
+
+/*   CONTACT PAGE STYLES   */
+
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 1rem;
+  border: solid 2px #d8b415;
+  text-decoration: none;
+  color: #eee;
+}
+
 /*   HEADING SIZE STYLES   */
 .lg-heading {
   font-size: 6rem;
@@ -130,7 +201,7 @@ body {
   font-size: 1.5rem;
   padding: .2rem 1rem;
   margin-bottom: 2rem;
-  background: rgba(55, 55, 55, .5)
+  background: rgba(55, 55, 55, .8)
 }
 
 h1, h2, h3 {
