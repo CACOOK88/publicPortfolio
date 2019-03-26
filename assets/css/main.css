@@ -144,9 +144,6 @@ body {
 
 
 /*   ABOUT PAGE STYLES   */
-main {
-  padding: 4rem;
-}
 .about-info {
   padding-top: 30px;
   display: grid;
@@ -166,6 +163,7 @@ main {
 }
 .bio {
   grid-area: bio;
+  margin-right: 10vw;
 }
 
 .bio h3 {
@@ -177,8 +175,40 @@ main {
 }
 
 /*   WORK PAGE STYLES   */
+.projects {
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.proj-container {
+  display: flex;   
+  width: 80vw;
+  border-radius: 5px;
+  background: #222; 
+  padding: 20px;
+  margin-top: 10px;
+  line-height: 1.75;
+}
+.proj-img {
+  width: 40vw;
+  height: auto;
+  border-radius: 5px;
+}
+
+.project-title,
+.project-link {
+  text-decoration: underline;
+  color: #eee;
+  transition: 0.3s
+}
+
+.project-title:hover,
+.project-link:hover {
+  color: #0366fa;
+}
 
 /*   CONTACT PAGE STYLES   */
 
@@ -191,14 +221,19 @@ main {
   font-size: 1.5rem;
   margin: 10px;
   padding: 1rem;
-  border: solid 2px #d8b415;
+  border: solid 2px #222;
   text-decoration: none;
   color: #eee;
+  transition: 0.3s
+}
+
+.contact a:hover {
+  background: rgba(50, 50, 50, .8);
 }
 
 /*   HEADING SIZE STYLES   */
 .lg-heading {
-  font-size: 6rem;
+  font-size: 4rem;
 }
 
 .sm-heading {
@@ -211,4 +246,36 @@ main {
 h1, h2, h3 {
   margin: 0;
   font-weight: 400;
+}
+.lg-heading,
+.sm-heading {
+  padding: 0 10vw;
+}
+
+#home h1,
+#home h2 {
+  padding: 0 1vw;
+}
+
+/*  MEDIA QUERIES FOR RESPONSIVENESS  */
+
+@media (max-width: 1200px) {
+
+  .about-info {
+    grid-template-areas: 
+      'bioimage'
+      'bio';
+    grid-template-columns: 1fr;
+  }
+  .bio {
+    margin: 0 10vw;
+  }
+
+  /*  WORK PAGE  */
+  .proj-container {
+    flex-direction: column;
+  }
+  .proj-img {
+    width: 100%;
+  }
 }
